@@ -12,16 +12,18 @@ public class ApplicationContextInfoTest {
 
     @Test
     @DisplayName("모든 빈 출력하기")
-    void findAllBean(){
+    void findAllBean() {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
         //iter + tab: 리스트나 배열이 있으면 for문 자동완성
         for (String beanDefinitionName : beanDefinitionNames) {
+
             Object bean = ac.getBean(beanDefinitionName);
             System.out.println("name = " + beanDefinitionName + " Object = " + bean); //sout + v: 변수명 찍어주는 단축키
             //sout + m: 메소드명 찍어주는 단축키
         }
-}
-//ctrl + d: 밑에복사
+    }
+
+    //ctrl + d: 밑에복사
     @Test
     @DisplayName("모든 빈 출력하기")
     void findApplicationBean() {
