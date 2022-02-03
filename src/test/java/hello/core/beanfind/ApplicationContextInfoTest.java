@@ -36,6 +36,8 @@ public class ApplicationContextInfoTest {
             if (beanDefinition.getRole() == BeanDefinition.ROLE_APPLICATION) { //ROLE_INFRASTRUCTURE: 스프링 내부사용 빈
                 Object bean = ac.getBean(beanDefinitionName);
                 System.out.println("name = " + beanDefinitionName + " Object = " + bean); //sout + v: 변수명 찍어주는 단축키
+
+
             }
 
             //sout + m: 메소드명 찍어주는 단축키
