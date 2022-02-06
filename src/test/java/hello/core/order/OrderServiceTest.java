@@ -18,6 +18,7 @@ public class OrderServiceTest {
         orderService = appConfig.orderService();
         memberService = appConfig.memberService();
     }
+
     @Test
     void createOrder(){
         Long memberId = 1L;
@@ -28,4 +29,7 @@ public class OrderServiceTest {
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
 
     }
+
+
+
 }

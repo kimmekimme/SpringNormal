@@ -13,6 +13,7 @@ public class MemberServiceTest {
     public void beforeEach(){
         AppConfig appConfig = new AppConfig();
         memberService = appConfig.memberService();
+
     }
 
 
@@ -21,7 +22,6 @@ public class MemberServiceTest {
     void join() {
         //given
         Member member = new Member(1L, "memberA", Grade.VIP);
-
         //when
         memberService.join(member);
         Member findMember = memberService.findMember(1L);
