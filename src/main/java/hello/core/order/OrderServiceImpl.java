@@ -6,11 +6,13 @@ import hello.core.discount.RateDiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
 import hello.core.member.MemoryMemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.w3c.dom.Node;
 
 @Component
+@RequiredArgsConstructor //final이 붙은 필드로 생성자를 만들어줌
 public class OrderServiceImpl implements OrderService {
 
     //
@@ -29,12 +31,13 @@ public class OrderServiceImpl implements OrderService {
 //        this.memberRepository = memberRepository;
 //    }
 //생성자 없어도 되고, 생성자 주입이 가장 먼저 호출 후 수정자 주입 호출
-    @Autowired //의존관계 자동 주입
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    // @Autowired //의존관계 자동 주입, 생성자 하나면 생략가능
 
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
+//    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+//
+//        this.memberRepository = memberRepository;
+//        this.discountPolicy = discountPolicy;
+//    }
 
 
 
